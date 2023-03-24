@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./index.css"/>
+    <script src="https://kit.fontawesome.com/3194a31079.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="div-header">
+            <ul class="header-ul">
+                <li ><img class="header-images"src="https://upload.wikimedia.org/wikipedia/en/1/12/Internal_Security_Department_%28Singapore%29_logo.png"/></li>
+                <li ><img class="header-images"src="data:image/jpeg;base64,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Tm08iFymvehrZYXiSGV8Lx7THFp7jbaORXFbCRqO6yYTsdF45oBQVJLjGYZD7UZ1b97dh8lFajohN/u6wW4Ojz8w76KHYf0qYrGAHSxzj/mMz82FvyWwd0yYhbKKAHjZx9NZRxji6atGWXD8oilQpTd2iR0fRBn99WXHBkdj+pzj8lKcPwPDMO1T2WyuIa1zzrSPccgGDbfk0Km67pIxefsCo6vWNtWJgaTfIAE3d5FWX0baFvg/x1cXS1jx2dcl7o2nm651j6Lmu6uz/LPgt/kj2FGnF3iixAvqIs4nCIiAIiIAiIgCIiAIiIDHrKSOVjo5WNkY4WLXC4I7iqq0p6HQ4mTD5Qy9z1MpOr/JIASO4g7doVuopKdWdN3iwzl/EtCsSgJEtHLYe00a7f1MuFqhhs97dRJfhqO/Zdaorax0t8TnZOY8L0ExOoI6uke0H2pPu2993bfAFWXoj0RQwkS1zxUyDMRtuIgeZOcniAORVoL6oqmMqSVll3e56keccYaA1oAAFgBkAOAC9ERVT0IiIAtJpLoxS10fV1Metb8Lxk9h4td9Ni3aL1Np3QOf9JeimupyXUw+2Q7tXKQD4mb/AOW/cFBamlkjJbJG6Nw2hzSD6rrmy8aikjflJG2QfE0O+auwx0l9yv5HOycjjPZmt7gWh9fVkCCndqn239hg73H6XK6TjwimabtpoWniI2D6LOsupY926MRskD0G6OKehtLMRU1W5xHYj4iNp3/Ec+69lPURUZzlN3kzoIiLkBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQH//Z" /></li>
+                <li><i class="fa-solid fa-bell icon"></i></li>
+                <li><i class="fa-solid fa-gear"></i></li>
+                <li><i class="fa-solid fa-crop-simple"></i></li>
+                <li>
+                <ul class="person-container">
+                    <li><img class="header-images" src="https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg"/></li>
+                    <li><span>Luqman<br> <span class="name-opacity">Bahagian Korporat</span></span></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+    </header>
+    <div class="home-container">
+        <div class="left-container">
+            <div class="inside-left-container">
+                <div class="image-div">
+                    <div class="image-one">
+                        <img class="img1" src="https://www.drupal.org/files/project-images/font_awesome_logo.png" />
+                    </div>
+                    <div class="image-one-icon">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                </div>
+                <div class="h5">
+                    <h5>MODUL</h5>
+                </div>
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>GEO BOARD</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>PENTADBIR</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>PERMOHANAN PROJECT</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>PENILAINAN PROJECT</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>KONTRAk</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>PERUNDING</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>VALUE MANAGEMENT</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="multiple-list">
+                    <ul class="multiple-li">
+                        <li>Dashboard</li>
+                        <li>Senaral Project</li>
+                        <li>Mokmal Tahunan</li>
+                        <li>senaral faciliator</li>
+                        <li>Janaan Laporan</li>
+                    </ul>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>Notice of Change</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>ROLLING PLAN(RP)</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="left-list-container">
+                    <div class="list-one">
+                        <ul class="left-ui">
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li>PENJANAAN LAPORAN</li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="inside-right-container">
+                <div class="first-right-container">
+                    <div class="va">
+                        <p>Makmal Kajian Nilai (VA)</p>
+                    </div>
+                    <div class="va-right">
+                        <ul>
+                            <li><i class="fa-solid fa-globe"></i></li>
+                            <li><a href="#">Value Management </a>
+                            <li> <i class="fa-solid fa-chevron-right"></i></li>
+                            <li><a href="#">Senarai Projek </a>
+                            <li> <i class="fa-solid fa-chevron-right"></i></li>   
+                            <li><a href="#">Maklumat Pelaksanaan Makmal </a>
+                            <li> <i class="fa-solid fa-chevron-right"></i></li>
+                            <li><a href="#">Makmal Kajiam Nilai (VA) </a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="clear"></div> -->
+                </div>
+                <div class="second-div">
+                    <div class="div">
+                    <div class="inner-second-div">
+                        <div class="makmal">
+                            <ul class="makmal-ul">
+                                <li><i class="fa-solid fa-bars"></i></li>
+                                <li>Makmal Kajian Nilai (VA)</li>
+                            </ul>
+                        </div>
+                        <div class="makmal">
+                            <ul class="makmal-ul">
+                                <li><i class="fa-solid fa-wrench"></i></li>
+                                <li>Makmal Kejuruteraan Nilai (VE)</li>
+                            </ul>
+                        </div>
+                        <div class="makmal">
+                            <ul class="makmal-ul">
+                                <li><i class="fa-solid fa-database"></i></li>
+                                <li>Makmal Semakan Nilai (VR)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="h1" >
+                        <h1 style="margin-left: 15%;">MAKLUMAT PELAKSANAAN MAKMAL</h1>
+                    </div>
+
+                    <div class="final-container">
+                        <div class="left-final">
+                            <div class="left-side-one">
+                                <ul class="left-ul">
+                                    <li class="circle"><i class="fa-regular fa-folder-closed"></i></li>
+                                    <li><span>RINGKASAN <br>PROJEK</span></li>
+                                </ul>
+                            </div>
+                            <div class="left-side-one">
+                                <ul class="left-ul">
+                                    <li class="circle"><i class="fa-regular fa-calendar"></i></li>
+                                    <li><span>RINGKASAN <br>PROJEK</span></li>
+                                </ul>
+                            </div>
+                            <div class="left-side-one">
+                                <ul class="left-ul">
+                                    <li class="circle"><i class="fa-regular fa-calendar-check"></i></li>
+                                    <li><span>RINGKASAN <br>PROJEK</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="final-right-container" style="border: 1px solid rgb(226, 220, 220);">
+                            <div class="final-right-container-two">
+                            <div class="whole">
+                            <div class="final-two">
+                                <ul class="right-top-ul">
+                                    <li><span><i class="fa-solid fa-bars"></i></span></li>
+                                    <li><h4>Makmal Kajian Nilai (VA)</h4></li>
+                                </ul>
+                            </div>
+
+                            
+                            <div class="final-second-div" style="padding-left: 7rem;">
+   
+                                 <span class="div-label-one">
+                                    <label for="radio">Pengecualian Penuh</label>
+                                    <input type="radio" class="radio" name="radio"/>
+                                    <label for="radio">YA</label>
+                                </span>
+                                <span class="div-label-two" style="padding-left: 2rem;">
+                                    <input type="radio" name="tidak"class="radio"  checked/>
+                                    <label for="tidak">tidak</label>
+                                </span>
+                            </div>
+                            
+                            <h1 class="h1-name">Maklumat Perancangan Makmal</h1>
+                        </div>
+                        <div class="whole-two">
+                            <div class="form-whole">
+                                <div class="form">
+                                    <ul class="form-ul">
+                                        <li><p>Tarikh Cadangan <br>Pra Makmal</p></li>
+                                        <li><input type="date" disabled> </li>
+                                    </ul>
+                                </div>
+                                <div class="form">
+                                    <ul class="form-ul">
+                                        <li><p>Tarikh Cadangan <br>Pra Makmal</p></li>
+                                        <li><input type="date" disabled> </li>
+                                    </ul>
+                                </div>
+
+                                <div class="form">
+                                    <ul class="form-ul-last">
+                                        <li>Keputusan Mesyuarat</li>
+                                        <li><input type="radio" /><span >Ya, Setuju Laksana Makmal</span></li>
+                                        <li><input type="radio" /><span >Tidak, Mesyuarat Pra Makmal Seterusnya</span></li>
+                                    </ul>
+                                </div>
+                                <div class="button">
+                                    <button>Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                         <div>
+                        <div class="table-container">
+                            <div class="table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Bill</th>
+                                            <th>Tarikh Cadangan Pra Makmal</th>
+                                            <th>Tarikh Pra Makmal</th>
+                                            <th>Surat Jemputan Mesyuarat</th>
+                                            <th>Keputusan Mesyuarat</th>
+                                            <th>Minit Mesyuarat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><input type="date"/></td>
+                                            <td><input type="date"/></td>
+                                            <td>surat_jemputan_1.pdf</td>
+                                            <td>Tidak, Mesyuarat Pra Makmal Seterusnya</td>
+                                            <td>surat_jemputan_1.pdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><input type="date"/></td>
+                                            <td><input type="date"/></td>
+                                            <td>surat_jemputan_1.pdf</td>
+                                            <td>Tidak, Mesyuarat Pra Makmal Seterusnya</td>
+                                            <td>surat_jemputan_1.pdf</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                        <h3 style="margin-left: 2em; margin-top: 3%;">Butiran Makmal</h3>
+                        <hr style="margin-top: 2%;">
+
+                        <div class="divv-whole">
+                            <div class="for-mbl">
+                            <div class="second-divv-whole">
+                                <div class="left-second-whole">
+                                    <div class="tarik">
+                                        <div class="inside-tarik">
+                                            <p>Tarikh Cadangan <br>Pra Makmal</p>
+                                        </div>
+                                        <div class="inside-tarik-tw0">
+                                            <input type="date" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="tarik">
+                                        <div class="inside-tarik">
+                                            <p>Tarikh Makmal Sebenar</p>
+                                        </div>
+                                        <div class="inside-tarik-tw0">
+                                            <input type="date" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="tarik">
+                                        <div class="inside-tarik">
+                                            <p>Tahun Perlaksanaan<br>Pra Makmal</p>
+                                        </div>
+                                        <div class="inside-tarik-tw0">
+                                            <input type="test" placeholder="YYY" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-second-whole">
+                                    <div class="tarik">
+                                        <div class="inside-tarik">
+                                            <p>Lokasi Makmal</p>
+                                        </div>
+                                        <div class="inside-tarik-tw0">
+                                            <input type="text" placeholder="JPS Negeri" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="tarik">
+                                        <div class="inside-tarik">
+                                            <p>Tarikh Lawatan Tapak</p>
+                                        </div>
+                                        <div class="inside-tarik-tw0">
+                                            <input type="date" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+<!-- 
+                          <div class="form">
+                                <ul class="form-ul">
+                                    <li><p>Tarikh Cadangan <br>Pra Makmal</p></li>
+                                    <li style="padding-left: 1.1em;"><input type="date" disabled> </li>
+                                    <li>Lokasi Makmal</li>
+                                    <li style="padding-left:2.4em;"><input type="text" placeholder="JPS Negeri" disabled> </li>
+                                </ul>
+                            </div>
+                            <div class="form">
+                                <ul class="form-ul">
+                                    <li><p>Tahun Perlaksanaan  <br>Makmal</p></li>
+                                    <li><input type="date" disabled> </li>
+                                    <li>Tarikh Lawatan Tapak</li>
+                                    <li><input type="date"  disabled> </li>
+                                </ul>
+                            </div>
+                            <div class="form">
+                                <ul class="form-ul">
+                                    <li><p>Tahun Perlaksanaan  <br>Makmal</p></li>
+                                    <li><input type="text" placeholder="YYY" disabled> </li>
+                                </ul>
+                            </div>
+                        </div> -->
+
+                        <h3 style="margin-left: 2em;margin-top: 3%;">Senarai Fasilitator</h3>
+
+                        <div class="another-table">
+                           <div class="another-table-one">
+                            <table class="table-2">
+                                <thead>
+                                    <tr>
+                                        <th>Bill</th>
+                                        <th>Nama Fasilitator</th>
+                                        <th>Gred</th>
+                                        <th>Peranan</th>
+                                        <th>Bahagian</th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><select name="x" class="x">
+                                            <option>Abdul Halim Bin Abdul Jalil</option>
+                                            <option>Abdul Halim Bin  </option>
+                                            <option>Abdul </option>
+                                        </select></td>
+                                        <td><select name="y">
+                                            <option>J48</option>
+                                            <option>J49</option>
+                                            <option>J50</option>
+                                        </select></td>
+                                        <td><select name="z">
+                                            <option>Ketua Fasilitator</option>
+                                            <option>Ketua FasilitatorKetua Fasilitator</option>
+                                            <option>Ketua</option>
+                                        </select></td>
+                                        <td>Bahagian Pengurusan Nilai, Unit Perancang Ekonomi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><select name="x">
+                                            <option>Amalia Binti Shamsudin</option>
+                                            <option>Abdul Halim Bin  </option>
+                                            <option>Abdul </option>
+                                        </select></td>
+                                        <td><select name="y">
+                                            <option>J48</option>
+                                            <option>J49</option>
+                                            <option>J50</option>
+                                        </select></td>
+                                        <td><select name="z">
+                                            <option>Fasilitator</option>
+                                            <option>Ketua FasilitatorKetua Fasilitator</option>
+                                            <option>Ketua</option>
+                                        </select></td>
+                                        <td>Bahagian Pengurusan Nilai, Unit Perancang Ekonomi</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                           </div>
+                        </div>
+
+                        <div class="button">
+                            <button>Simpan</button>
+                        </div>
+
+                        <div class="table-container">
+                            <div class="table-two">
+                                <table class="table-three">
+                                    <thead>
+                                        <tr>
+                                            <th>Bill</th>
+                                            <th>Tarikh Cadangan Pra Makmal</th>
+                                            <th>Tarikh Pra Makmal</th>
+                                            <th>Surat Jemputan Mesyuarat</th>
+                                            <th>Keputusan Mesyuarat</th>
+                                            <th>Minit Mesyuarat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><input type="date"/></td>
+                                            <td><input type="date"/></td>
+                                            <td><input type="date"/></td>
+                                            <td>JPS Negeri </td>
+                                            <td><div><span class="table-span">Papar</span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><input type="date"/></td>
+                                            <td><input type="date"/></td>
+                                            <td><input type="date"/></td>
+                                            <td>JPS Negeri</td>
+                                            <td><div><span class="table-span">Papar</span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
